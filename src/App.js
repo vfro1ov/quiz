@@ -2,7 +2,7 @@ import Game from './component/Game';
 import Result from './component/Result';
 import './index.scss';
 
-const questions = [
+export const questions = [
   {
     title: 'React - это ... ?',
     variants: ['библиотека', 'фреймворк', 'приложение'],
