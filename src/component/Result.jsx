@@ -3,7 +3,7 @@ export default function Result(props) {
 		<>
     <div className="result">
       <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" />
-      <h2>Вы отгадали {props.correct} ответа</h2>
+      <h2>Вы отгадали {props.correct} ответа из 3 вопросов</h2>
 			<a href="/"><button>Попробовать снова</button></a>
     </div>
 		</>

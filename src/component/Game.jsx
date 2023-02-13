@@ -1,11 +1,8 @@
 export default function Game(props) {
-
-const percentage = Math.round((props.step / props.question.length) * 100);
-console.log(percentage)
   return (
     <>
       <div className="progress">
-        <div style={{ width: `${percentage}%`}} className="progress__inner"></div>
+        <div style={{ width: `${props.percentage}%`}} className="progress__inner"></div>
       </div>
       <h1>{props.question.title}</h1>
       <ul>

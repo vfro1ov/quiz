@@ -28,7 +28,9 @@ export const questions = [
 function App() {
 	const [step,setStep] = useState(0);
 	const [corrects,setCorrects] = useState(0);
-	
+	const percentage = Math.round((step / questions.length) * 100);
+	console.log(percentage)
+
 	const question = questions[step]
 
 	const onClickVariant =(index) => {
