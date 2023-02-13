@@ -1,14 +1,16 @@
-export default function Game() {
+export default function Game(props) {
+
+const percentage = Math.round((props.step / props.question.length) * 100);
   return (
     <>
       <div className="progress">
-        <div style={{ width: '50%' }} className="progress__inner"></div>
+        <div style={{ width: `${percentage}%`}} className="progress__inner"></div>
       </div>
-      <h1>Что такое useState?</h1>
+      <h1>{props.question.title}</h1>
       <ul>
-        <li>Это функция для хранения данных компонента</li>
-        <li>Это глобальный стейт</li>
-        <li>Это когда на ты никому не нужен</li>
+        {props.question.variants.map((text)=>
+				(<li onClick={() => props.onClickVariant(props.index)} key={text}>{text}
+				</li>))}
       </ul>
     </>
   );
